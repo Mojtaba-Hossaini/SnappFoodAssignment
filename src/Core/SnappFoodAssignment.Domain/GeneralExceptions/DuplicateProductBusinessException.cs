@@ -1,6 +1,6 @@
 ﻿using SnappFoodAssignment.Domain.Contract.Share;
 
-namespace SnappFoodAssignment.Domain.Products.Exceptions;
+namespace SnappFoodAssignment.Domain.GeneralExceptions;
 public class DuplicateProductBusinessException : BusinessException
 {
     public override string Message => Messages.DuplicateProductException;

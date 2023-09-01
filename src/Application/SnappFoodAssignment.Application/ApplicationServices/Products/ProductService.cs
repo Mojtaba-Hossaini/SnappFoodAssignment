@@ -3,6 +3,7 @@ using SnappFoodAssignment.Application.Contract.Products;
 using SnappFoodAssignment.Application.Contract.Products.Dtos;
 using SnappFoodAssignment.Application.Contract.UOW;
 using SnappFoodAssignment.Application.Extensions;
+using SnappFoodAssignment.Domain.GeneralExceptions;
 using SnappFoodAssignment.Domain.Orders;
 using SnappFoodAssignment.Domain.Products;
 using SnappFoodAssignment.Domain.Products.Exceptions;
@@ -31,13 +32,16 @@ public class ProductService : IProductService
         var product = await _memoryCache.GetOrCreateAsync($"{nameof(Product)}_{id}", async c =>
         {
             c.SlidingExpiration = TimeSpan.FromSeconds(30);
-            return await _productRepository.GetByIdAsync(id);
+            return await _productRepository.GetByIdAsync(id) ?? null;
         });
+        if (product is null) throw new NotFoundBusinessException();
         return product.ToProductDto();
     }
 
     public async Task AddProductAsync(ProductDto request)
     {
+        if(await _productRepository.ExistSsync(request.Title))
+            throw new DuplicateProductBusinessException();
         await _productRepository.AddAsync(request.ToCoreDomain());
         await _unitOfWork.SaveAsync();
     }
@@ -46,6 +50,7 @@ public class ProductService : IProductService
     {
         var user = await _userRepository.GetByIdAsync(userId);
         var product = await _productRepository.GetByIdAsync(productId);
+        if (product is null) throw new NotFoundBusinessException();
         if (product.InventoryCount < quantity)
             throw new InventoryCountOutOfSaleBusinessException();
         var order = new Order
@@ -62,6 +67,7 @@ public class ProductService : IProductService
     public async Task UpdateInventoryCountAsync(long productId, int quantity)
     {
         var product = await _productRepository.GetByIdAsync(productId);
+        if (product is null) throw new NotFoundBusinessException();
         product.UpdateInventoryCount(quantity);
         await _productRepository.UpdateAsync(product);
         await _unitOfWork.SaveAsync();
