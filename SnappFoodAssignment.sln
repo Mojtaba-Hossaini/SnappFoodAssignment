@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2ACA47C0-8D2E-4C1B-96CC-DAD30A210071}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CDFB9AB4-A57C-4D11-8C5C-23BD80BA7181}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E9095D7B-A327-4DB7-AF89-0C924A9C69C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6A3E668B-63FB-4559-BCEF-38F42BA0DC29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfraStructure", "InfraStructure", "{6538F195-1214-419E-8B24-B50F20B7EE22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{EE57AE47-EE10-4EAE-9F8C-79206F95FE41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappFoodAssignment.Domain", "src\Core\SnappFoodAssignment.Domain\SnappFoodAssignment.Domain.csproj", "{3737B31C-C3D3-409E-BD44-DFE03E3507AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappFoodAssignment.Domain.Contract", "src\Core\SnappFoodAssignment.Domain.Contract\SnappFoodAssignment.Domain.Contract.csproj", "{E28F731F-4A9C-4996-8B53-48C1F2148A6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappFoodAssignment.Application", "src\Application\SnappFoodAssignment.Application\SnappFoodAssignment.Application.csproj", "{FF9451A9-79F5-4235-B39C-99F6357955F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappFoodAssignment.Application.Contract", "src\Application\SnappFoodAssignment.Application.Contract\SnappFoodAssignment.Application.Contract.csproj", "{66F1DAF8-28AD-43B8-A3B4-7C3E6F76E1CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappFoodAssignment.InfraStructure.EFCore", "src\InfraStructure\SnappFoodAssignment.InfraStructure.EFCore\SnappFoodAssignment.InfraStructure.EFCore.csproj", "{A2CE8E9A-B45D-4708-BD0D-978871CC6A0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnappFoodAssignment.Api", "src\Presentation\SnappFoodAssignment.Api\SnappFoodAssignment.Api.csproj", "{AE50B068-64A6-4FA1-96CD-C72E96E86E1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnappFoodAssignment.Test", "test\SnappFoodAssignment.Test\SnappFoodAssignment.Test.csproj", "{8EB40223-01E6-4CC3-83CE-99F633015131}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3737B31C-C3D3-409E-BD44-DFE03E3507AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3737B31C-C3D3-409E-BD44-DFE03E3507AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3737B31C-C3D3-409E-BD44-DFE03E3507AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3737B31C-C3D3-409E-BD44-DFE03E3507AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E28F731F-4A9C-4996-8B53-48C1F2148A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E28F731F-4A9C-4996-8B53-48C1F2148A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E28F731F-4A9C-4996-8B53-48C1F2148A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E28F731F-4A9C-4996-8B53-48C1F2148A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF9451A9-79F5-4235-B39C-99F6357955F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9451A9-79F5-4235-B39C-99F6357955F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9451A9-79F5-4235-B39C-99F6357955F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9451A9-79F5-4235-B39C-99F6357955F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F1DAF8-28AD-43B8-A3B4-7C3E6F76E1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F1DAF8-28AD-43B8-A3B4-7C3E6F76E1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F1DAF8-28AD-43B8-A3B4-7C3E6F76E1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F1DAF8-28AD-43B8-A3B4-7C3E6F76E1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CE8E9A-B45D-4708-BD0D-978871CC6A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CE8E9A-B45D-4708-BD0D-978871CC6A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CE8E9A-B45D-4708-BD0D-978871CC6A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CE8E9A-B45D-4708-BD0D-978871CC6A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE50B068-64A6-4FA1-96CD-C72E96E86E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE50B068-64A6-4FA1-96CD-C72E96E86E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE50B068-64A6-4FA1-96CD-C72E96E86E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE50B068-64A6-4FA1-96CD-C72E96E86E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB40223-01E6-4CC3-83CE-99F633015131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB40223-01E6-4CC3-83CE-99F633015131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB40223-01E6-4CC3-83CE-99F633015131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB40223-01E6-4CC3-83CE-99F633015131}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9095D7B-A327-4DB7-AF89-0C924A9C69C9} = {2ACA47C0-8D2E-4C1B-96CC-DAD30A210071}
+		{6A3E668B-63FB-4559-BCEF-38F42BA0DC29} = {2ACA47C0-8D2E-4C1B-96CC-DAD30A210071}
+		{6538F195-1214-419E-8B24-B50F20B7EE22} = {2ACA47C0-8D2E-4C1B-96CC-DAD30A210071}
+		{EE57AE47-EE10-4EAE-9F8C-79206F95FE41} = {2ACA47C0-8D2E-4C1B-96CC-DAD30A210071}
+		{3737B31C-C3D3-409E-BD44-DFE03E3507AF} = {6A3E668B-63FB-4559-BCEF-38F42BA0DC29}
+		{E28F731F-4A9C-4996-8B53-48C1F2148A6A} = {6A3E668B-63FB-4559-BCEF-38F42BA0DC29}
+		{FF9451A9-79F5-4235-B39C-99F6357955F0} = {E9095D7B-A327-4DB7-AF89-0C924A9C69C9}
+		{66F1DAF8-28AD-43B8-A3B4-7C3E6F76E1CC} = {E9095D7B-A327-4DB7-AF89-0C924A9C69C9}
+		{A2CE8E9A-B45D-4708-BD0D-978871CC6A0E} = {6538F195-1214-419E-8B24-B50F20B7EE22}
+		{AE50B068-64A6-4FA1-96CD-C72E96E86E1F} = {EE57AE47-EE10-4EAE-9F8C-79206F95FE41}
+		{8EB40223-01E6-4CC3-83CE-99F633015131} = {CDFB9AB4-A57C-4D11-8C5C-23BD80BA7181}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2EA3B11-9584-4E79-A02D-8001B5821633}
+	EndGlobalSection
+EndGlobal
